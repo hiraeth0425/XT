@@ -1,0 +1,355 @@
+/* 首頁 */
+/* 版心 */
+.wrapper {
+    margin:0 auto;
+    width: 1200px;
+}
+
+body {
+    background: #f3f5f7;
+}
+/* 頭部 */
+.header {
+    height: 100px;
+    background-color: #fff;
+}
+.header .wrapper {
+    display: flex;
+    padding-top: 40px;
+}
+/* logo */
+.logo a {
+    display:block;
+    width: 195px;
+    height: 42px;
+    background: url(../images/logo.png) no-repeat;
+    font-size: 0px;
+}
+/* 導航 */
+.nav {
+    margin-left:102px;
+}
+.nav ul {
+    display: flex;
+}
+.nav li {
+    margin-right:24px;
+
+}
+.nav li a {
+    display: block;
+    /* 超連結左右的間距 */
+    padding: 6px 8px;
+    line-height: 27px;
+    font-size:19px;
+}
+    /* active類選擇器,表示默認選中的a ,併集選擇器*/
+.nav li .active,
+.nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+/* 搜索 */
+.search {
+    display: flex;
+    margin-left: 64px;
+    padding-left: 19px;
+    padding-right:12px;
+    width: 412px;
+    height: 40px;
+    background-color: #f3f5f7;
+    border-radius: 20px  ;
+}
+.search input {
+    flex: 1;
+    border:0;
+    background-color: transparent;
+    /* 去掉表單控件的焦點框 */
+    outline:none;
+}
+
+    /* 選中placeholder屬性文字樣式 */
+.search input::placeholder {
+    font-size:14px;
+    color: #999;
+}
+    /* 父級是flex布局,子級變彈性盒子,加寬高生效 */
+.search a {
+    align-self: center;
+    width: 16px;
+    height: 16px;
+    background: url(../images/fa-search.png);
+}
+/* 用戶 */
+.user {
+    margin-left: 32px;
+    margin-top:4px;
+    margin-bottom: 7px;
+}
+.user img {
+    /* vertical-align 行內塊和行內垂直方向對齊方式 */
+    vertical-align: middle;
+    margin-right:7px;
+    border-radius: 50%;
+}
+.user span {
+    font-size: 16px;
+    color:#666;
+}
+
+/* banner區域 */
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner .wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 420px;
+    background:url(../images/banner.jpg) no-repeat;
+}
+    /* 側導航 */
+.banner .left {
+    padding:3px 20px;
+    width: 190px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.banner .left a {
+    /* 推薦轉塊級文字,因為寬度是父級100% */
+    display: block;
+    height: 46px;
+    line-height:46px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.banner .left a:hover {
+    background:url(../images/right.png) no-repeat right center;
+    color:#00a4ff;
+}
+/* 課程表 */
+.banner .right {
+    margin-top:50px;
+    width: 218px;
+    height: 305px;
+    background-color: #209dd5;
+    border-radius:10px;
+}
+.banner .right h3 {
+    margin-left: 14px;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+    font-size:15px;
+    font-weight: 400;
+
+}
+.banner .right .content {
+    padding:14px;
+    height: 257px;
+    background: #fff;
+    border-radius:10px;
+}
+.banner .right dl {
+    margin-bottom:12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.banner .right dt {
+    margin-bottom:8px;
+    font-size:14px;
+    line-height:20px;
+    font-weight:700;
+}
+.banner .right dd {
+    margin-bottom:8px;
+    font-size:12px;
+    line-height:16px;
+}
+.banner .right dd span {
+    color:#00a4ff;
+}
+.banner .right dd strong {
+    color: #7d7d7d;
+    font-weight:400;
+}
+.banner .right a {
+    display: block;
+    height: 32px;
+    background: #00a4ff;
+    text-align: center;
+    font-size:14px;
+    color:#fff;
+    line-height:32px;
+    border-radius:15px;
+}
+/* 精品推薦 */
+.recommend {
+    display: flex;
+    margin-top:11px;
+    padding:0 20px;
+    height: 60px;
+    background:#fff;
+    box-shadow:0px 1px 2px 0px rgba(211,211,211,0.5);
+    line-height: 60px;
+}
+.recommend h3 {
+    color:#00a4ff;
+    font-size: 18px;
+    font-weight:400;
+}
+.recommend ul {
+    /* 除去標題和修改興趣的尺寸,父級剩餘尺寸都給ul,實現把修改興趣擠到最右側 */
+    flex:1;
+    display:flex;
+}
+.recommend ul li a {
+    padding: 0 24px;
+    border-right:1px solid #e0e0e0;
+    font-size:18px;
+    color: #333
+}
+.recommend ul li:last-child a {
+    /* 最後一個選取的用法!非常不熟! */
+    border-right:none;
+}
+.recommend .modify {
+    font-size:16px;
+    color: #00a4ff;
+}
+/* 推薦課程course */
+.course {
+    margin:0 auto;
+    width: 1200px;
+    margin-top:15px;
+}
+    /* 標題 - 公共類,與其他區域共用 */
+.hd {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    line-height: 60px;
+}
+.course h3 {
+    font-size: 21px;
+    font-weight: normal;
+}
+.course .more {
+    padding-right:40px;
+    font-size:14px;
+    color: #999;
+    background:url(../images/right.png) no-repeat right center;
+}
+/* 課程內容-公共用 */
+.bd ul {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.bd li {
+    margin-bottom: 14px;
+    width: 228px;
+    height: 271px;
+}
+.bd li .pic {
+    height: 156px;
+}
+.bd li img {
+    height: 152px;
+}
+.bd li .text {
+    padding:20px;
+    height: 115px;
+    background-color:#FFF;
+}
+.bd li .text h4 {
+    height: 40px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height:20px;
+    font-weight: normal;
+}
+.bd li .text p {
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+}
+.bd li .text p span {
+    color:#fa6400;
+}
+.bd li .text i {
+    font-style:normal;
+}
+/* 前端 */
+.hd ul {
+    display: flex;
+}
+.hd li {
+    margin-right: 60px;
+    font-size: 16px;
+}
+.hd li .active {
+    color: #00a4ff;
+}
+.bd {
+    display: flex;
+    justify-content: space-between;
+}
+.bd .left {
+    width: 228px;
+}
+.bd .right {
+    width: 957px;
+}
+.bd .right .top {
+    margin-bottom: 15px;
+    height: 100px;
+}
+/* 版權區域 */
+.footer {
+    margin-top:60px;
+    padding-top:60px;
+    height: 273px;
+    background-color: #fff;
+}
+.footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.footer .wrapper .left {
+    width: 460px;
+}
+.footer .wrapper .left p {
+    margin-top: 24px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    line-height:17px;
+    color:#666;
+}
+.footer .left .download {
+    display: block;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #00a4ff;
+    color: #00a4ff;
+}
+.footer .right {
+    display: flex;
+}
+.footer .right dl {
+    margin-left: 130px;
+}
+.footer .right dt {
+    margin-bottom:12px;
+    font-size: 16px;
+    line-height:23px;
+}
+.footer .right a {
+    display: flex;
+    font-size: 14px;
+    line-height:24px;
+    color: #666;
+}
